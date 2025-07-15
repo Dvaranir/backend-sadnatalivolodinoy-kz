@@ -543,6 +543,10 @@ export interface ApiPageHomePageHome extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    categories: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::category.category'
+    >;
     categorySectionHeading: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -580,6 +584,7 @@ export interface ApiPageHomePageHome extends Struct.SingleTypeSchema {
         };
       }>;
     phone: Schema.Attribute.Relation<'oneToOne', 'api::social.social'>;
+    plants: Schema.Attribute.Relation<'oneToMany', 'api::plant.plant'>;
     plantsSectionHeading: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

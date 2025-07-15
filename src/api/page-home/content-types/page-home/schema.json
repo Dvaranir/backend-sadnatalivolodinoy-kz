@@ -69,6 +69,16 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::social.social"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    },
+    "plants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::plant.plant"
     }
   }
 }
